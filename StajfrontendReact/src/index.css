@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.goz {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  right: 10px; /* İkonu sağa hizalamak için */
+  background-color: #000; /* Arka plan siyah */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex; /* Flexbox kullanarak ikonun ortalanması */
+  align-items: center; /* Dikeyde ortalar */
+  justify-content: center; /* Yatayda ortalar */
+}
+:root {
+  --black-color: #fff;
+}
+.h1arka {
+  border-radius: 25px;
+  background-color: #fff;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: url("https://i.pinimg.com/originals/09/05/a7/0905a74092fa43fce6218aa48f6a26a4.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #66fcf1;
+  animation: animateBg 4s linear infinite;
+}
+@keyframes animateBg {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.login-box {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background: transparent;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 0, 0, 0.349);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+}
+.h1 {
+  font-size: 2em;
+
+  color: rgb(133, 53, 53);
+  text-align: center;
+}
+.input-box {
+  position: relative;
+  width: 310px;
+  margin: 30px 0;
+  border-bottom: 1px solid var(--black-color);
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: var(--black-color);
+  pointer-events: none;
+  transition: 0.5s;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: var(--black-color);
+  padding: 0 35px 0 5px;
+}
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  color: var(--black-color);
+  transform: translateY(-50%);
+}
+.remember-forgot {
+  margin: -15px 0 15px;
+  font-size: 0.9em;
+  color: var(--black-color);
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot label input {
+  margin-right: 3px;
+}
+.remember-forgot a {
+  color: var(--black-color);
+  text-decoration: none;
+}
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+.button {
+  margin-bottom: 50px;
+  width: 100%;
+  height: 40px;
+  background-color: #000;
+  border: 1px dashed aqua;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--black-color);
+  font-weight: 500;
+}
+.register-link {
+  font-size: 0.9em;
+  color: var(--black-color);
+  text-align: center;
+  margin: 25px 0 10px;
+}
+.register-link p a {
+  color: var(--black-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 500px) {
+  .login-box {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+  }
+  .input-box {
+    width: 290px;
+  }
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+.success-background {
+  color: #fff;
+}
+.success-message {
+  color: #a72828;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.invalid-feedback {
+  color: #a72828; /* Kırmızı renk */
+  font-size: 0.875em; /* Font boyutunu küçültme */
+  margin-top: 100px; /* Üstten boşluk */
+  display: block; /* Hata mesajının görünmesini sağlar */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Arka planı hafif beyaz yaparak okunabilirliği artır */
+  padding: 5px; /* Mesajın etrafında boşluk */
+  border-radius: 3px; /* Köşeleri yuvarla */
+}
